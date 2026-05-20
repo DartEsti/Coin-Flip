@@ -5,9 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    color: #fff;
+    color: #000000;
 
-    background-image: url("ConFlip by Dart.png");
+    background-image: url("CoinFlip by Dart.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
