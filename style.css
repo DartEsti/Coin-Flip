@@ -176,3 +176,13 @@ button:disabled:hover {
     transform: none;
     box-shadow: none;
 }
+
+@keyframes flipResult {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(var(--final-rotation));
+    }
+}
