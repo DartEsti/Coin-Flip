@@ -26,6 +26,8 @@ body {
     overflow: hidden;
 
     perspective: 1000px;
+    transform-style: preserve-3d;
+
     margin-bottom: 20px;
 
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -43,12 +45,18 @@ body {
     background-repeat: no-repeat;
 }
 
-.heads {
+.side.heads {
     background-image: url("Heads.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.tails {
+.side.tails {
     background-image: url("Tails.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: rotateY(180deg);
 }
 
