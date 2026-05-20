@@ -1,5 +1,4 @@
 body {
-    background: linear-gradient(135deg, #667eea, #764ba2);
     margin: 0;
     height: 100vh;
     display: flex;
@@ -7,6 +6,12 @@ body {
     align-items: center;
     font-family: "Montserrat", sans-serif;
     color: #fff;
+
+    background-image: url("ConFlip by Dart.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -18,12 +23,16 @@ body {
 }
 
 #coin {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
+    position: relative;
     border-radius: 50%;
+    overflow: hidden;
+
     perspective: 1000px;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .side {
@@ -40,15 +49,19 @@ body {
 }
 
 .heads {
-    background: radial-gradient(circle at 35% 35%, #fceabb, #f8b500);
-    color: #333;
+    background-image: url("Heads.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateX(0deg);
 }
 
 .tails {
-    /* Adjust as needed depending on the initial appearance */
-    background: radial-gradient(circle at 65% 65%, #c5c6c7, #636466);
-    color: #fff;
-    transform: rotateX(180deg); /* Ensure it matches the keyframe logic */
+    background-image: url("Tails.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateX(180deg);
 }
 
 .flip {
