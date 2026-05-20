@@ -1,22 +1,22 @@
 function flipCoin() {
+
     const coin = document.getElementById("coin");
     const status = document.getElementById("status");
     const button = document.querySelector("button");
 
     button.disabled = true;
 
-    status.innerHTML = 'Flipping<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>';
+    status.textContent = "Flipping...";
 
-    // Start animation
-    coin.style.animation = "none";
-    coin.offsetHeight;
-
-    coin.style.animation = "spin 3s ease-in-out";
+    // Spin animation
+    coin.classList.add("spinning");
 
     // Random result
     const isHeads = Math.random() < 0.5;
 
     setTimeout(() => {
+
+        // CHANGE IMAGE AFTER SPIN
         if (isHeads) {
             coin.src = "Heads.png";
             status.textContent = "Heads";
@@ -25,6 +25,9 @@ function flipCoin() {
             status.textContent = "Tails";
         }
 
+        coin.classList.remove("spinning");
+
         button.disabled = false;
+
     }, 3000);
 }
