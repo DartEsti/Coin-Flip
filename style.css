@@ -5,13 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    color: #000000;
+    color: #fff;
 
-    background-image: url("CoinFlip by Dart.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url("CoinFlip by Dart.png") center center / cover no-repeat fixed;
 }
 
 .container {
@@ -41,27 +37,19 @@ body {
     position: absolute;
     border-radius: 50%;
     backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .heads {
     background-image: url("Heads.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotateX(0deg);
 }
 
 .tails {
     background-image: url("Tails.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 .flip {
@@ -70,10 +58,10 @@ body {
 
 @keyframes flip {
     0%, 100% {
-        transform: rotateX(0deg);
+        transform: rotateY(0deg);
     }
     50% {
-        transform: rotateX(3600deg);  /* Fast continuous flip */
+        transform: rotateY(3600deg);  /* Fast continuous flip */
     }
 }
 
@@ -88,10 +76,10 @@ body {
 
 @keyframes continuousFlip {
     0%, 100% {
-        transform: rotateX(0deg);
+        transform: rotateY(0deg);
     }
     50% {
-        transform: rotateX(3600deg);
+        transform: rotateY(3600deg);
     }
 }
 
