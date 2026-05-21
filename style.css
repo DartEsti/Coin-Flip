@@ -103,7 +103,7 @@ button:disabled:hover {
 }
 
 .spinning {
-    animation: toss 1.2s ease-in-out;
+    animation: toss 1.6s ease-in-out;
 }
 
 @keyframes toss {

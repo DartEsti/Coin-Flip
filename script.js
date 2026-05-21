@@ -31,7 +31,7 @@ function flipCoin() {
 
         frame++;
 
-    }, 100);
+    }, 180);
 
     // FINAL RESULT
     setTimeout(() => {
