@@ -155,10 +155,14 @@ button:disabled:hover {
 @keyframes spin {
 
     0% {
-        transform: rotate(0deg);
+        transform: rotateY(0deg) translateY(0);
+    }
+
+    50% {
+        transform: rotateY(180deg) translateY(-50px);
     }
 
     100% {
-        transform: rotate(1440deg);
+        transform: rotateY(360deg) translateY(0);
     }
 }
