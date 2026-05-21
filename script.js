@@ -8,15 +8,36 @@ function flipCoin() {
 
     status.textContent = "Flipping...";
 
-    // Spin animation
+    // Start animation
+    coin.classList.remove("spinning");
+
+    void coin.offsetWidth;
+
     coin.classList.add("spinning");
 
-    // Random result
+    // RANDOM RESULT
     const isHeads = Math.random() < 0.5;
 
+    // SHOW BOTH SIDES DURING FLIP
+    let frame = 0;
+
+    const flipInterval = setInterval(() => {
+
+        if (frame % 2 === 0) {
+            coin.src = "Heads.png";
+        } else {
+            coin.src = "Tails.png";
+        }
+
+        frame++;
+
+    }, 100);
+
+    // FINAL RESULT
     setTimeout(() => {
 
-        // CHANGE IMAGE AFTER SPIN
+        clearInterval(flipInterval);
+
         if (isHeads) {
             coin.src = "Heads.png";
             status.textContent = "Heads";
@@ -29,5 +50,5 @@ function flipCoin() {
 
         button.disabled = false;
 
-    }, 3000);
+    }, 1200);
 }

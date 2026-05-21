@@ -29,6 +29,8 @@ body {
     margin-bottom: 20px;
 
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+    transform-style: preserve-3d;
 }
 
 .flip {
@@ -149,20 +151,38 @@ button:disabled:hover {
 }
 
 .spinning {
-    animation: spin 3s ease-in-out;
+    animation: toss 1.2s ease-in-out;
 }
 
-@keyframes spin {
+@keyframes toss {
 
     0% {
-        transform: rotateX(0deg) translateY(0);
+        transform:
+            rotateY(0deg)
+            translateY(0);
+    }
+
+    25% {
+        transform:
+            rotateY(720deg)
+            translateY(-120px);
     }
 
     50% {
-        transform: rotateX(180deg) translateY(-50px);
+        transform:
+            rotateY(1440deg)
+            translateY(-180px);
+    }
+
+    75% {
+        transform:
+            rotateY(2160deg)
+            translateY(-120px);
     }
 
     100% {
-        transform: rotateX(360deg) translateY(0);
+        transform:
+            rotateY(2880deg)
+            translateY(0);
     }
 }
