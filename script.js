@@ -21,17 +21,14 @@ function flipCoin() {
     // SHOW BOTH SIDES DURING FLIP
     let frame = 0;
 
-    const flipInterval = setInterval(() => {
+const flipInterval = setInterval(() => {
 
-        if (frame % 2 === 0) {
-            coin.src = "Heads.png";
-        } else {
-            coin.src = "Tails.png";
-        }
+    coin.src =
+        coin.src.includes("Heads.png")
+        ? "Tails.png"
+        : "Heads.png";
 
-        frame++;
-
-    }, 180);
+}, 80);
 
     // FINAL RESULT
     setTimeout(() => {
