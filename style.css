@@ -33,54 +33,6 @@ body {
     transform-style: preserve-3d;
 }
 
-.flip {
-    animation: flip 3s linear infinite; /* Using 'infinite' for continuous looping until stopped */
-}
-
-@keyframes flip {
-    0%, 100% {
-        transform: rotateX(0deg);
-    }
-    50% {
-        transform: rotateX(3600deg);  /* Fast continuous flip */
-    }
-}
-
-@keyframes verticalMove {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-50px); /* Adjust as needed for visible effect */
-    }
-}
-
-@keyframes continuousFlip {
-    0%, 100% {
-        transform: rotateY(0deg);
-    }
-    50% {
-        transform: rotateY(3600deg);
-    }
-}
-
-@keyframes decelerateFlip {
-    0% {
-        transform: rotateX(var(--rotation-start));
-    }
-    100% {
-        transform: rotateX(var(--rotation-end));
-    }
-}
-
-.flip-continuous {
-    animation: continuousFlip 3s linear infinite;
-}
-
-.flip-decelerate {
-    animation: decelerateFlip 2s cubic-bezier(0.32, 0.64, 0.45, 1) forwards;
-}
-
 #status {
     font-size: 24px;
     margin-bottom: 20px;
